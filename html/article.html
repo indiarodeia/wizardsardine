@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/blog.css">
 
-    <title>Wizard Sardine Blog</title>
+    <title>Wizard Sardine Article</title>
 
 </head>
 
@@ -71,7 +71,7 @@
             <nav id="desktop-menu">
                 <ul>
                     <li class="menu-item"><a title="About" href="#">About</a></li>
-                    <li class="menu-item active"><a title="Blog" href="html/blog.html">Blog</a></li>
+                    <li class="menu-item"><a title="Blog" href="html/blog.html">Blog</a></li>
                     <li class="menu-item menu-git"><a title="Github" href="https://github.com/revault" target="_blank">
                             <img src="../assets/images/icon_github_grey.svg" alt="Github"></a>
                     </li>
@@ -109,36 +109,130 @@
     </header>
 
     <main>
-        <section id="blog-page">
+        <section id="article-page">
 
-            <h1 class="title-blog">Blog</h1>
+            <div class="article-actions">
+                <a class="btn-primary">
+                    <img src="../assets/images/icon_back.svg" alt="Back to blog list" width="9px">
+                    Back to blog list</a>
+                <a href="#">Light mode</a>
 
-            <div class="articles-wrapper">
+            </div>
 
-                <div class="article">
-                    <div class="img-wrapper">
-                        <img class="img-cover" src="../assets/images/blog.jpg" alt="Article Image">
+            <!-- Article -->
+            <div class="article">
+
+                <!-- Header -->
+                <div class="article-header">
+                    <div class="chips-wrapper">
+                        <div class="chip">Bitcoin</div>
+                        <div class="chip">Mining</div>
                     </div>
-                    <div class="article-details">
-                        <div class="infos">
-                            <div class="chips-wrapper">
-                                <div class="chip">Bitcoin</div>
-                                <div class="chip">Mining</div>
-                            </div>
-                            <p class="date">Published on 11 Nov. 2022</p>
-                        </div>
+                    <p class="date">Published on 11 Nov. by <span>John Doe</span></span></p>
+                    <h1 class="article-title">Mining Your Own Bitcoin: Why Do It?</h1>
+                    <h3 class="article-description">There are lots of reasons why someone chooses to mine bitcoin. This
+                        article overviews the most common incentives to be a
+                        miner.</h3>
+                    <a href="#articleContent" class="btn-secondary">
+                        Start reading
+                        <img src="../assets/images/icon_arrow_down.svg" alt="Start reading" height="14px">
 
-                        <div>
-                            <h3 class="article-title">Mining Your Own Bitcoin: Why Do It?</h3>
-                            <p class="article-description">There are lots of reasons why someone chooses to mine
-                                bitcoin.
-                                This article overviews the most common incentives to be a
-                                miner.</p>
-                        </div>
+                    </a>
 
-                        <a href="article.html" class="btn-read">Read article ></a>
+                    <div class="cover-img">
+                        <div class="cover-img-wrapper">
+                            <img class="img-cover" src="../assets/images/blog.jpg" alt="Blog image cover">
+                        </div>
+                        <p class="image-description">
+                            <span>Picture 1.</span>
+                            Random picture of bunker.
+                        </p>
                     </div>
                 </div>
+
+                <!-- Content (text) -->
+                <section class="article-content" id="#articleContent">
+                    <p class="a-text">Almost anyone who’s heard about bitcoin has heard of mining, but most people are
+                        unsure why someone – especially an
+                        individual at home, for example – would choose to become a miner. Profit is an obvious reason,
+                        but many small-scale and
+                        at-home miners choose to miner their own bitcoin for many other reasons besides
+                        dollar-denominated profits.</p>
+
+                    <p class="a-heading">Heat Exhaust Reuse</p>
+                    <p class="a-text">Besides satoshis and noise, mining also creates a lot of one other commodity:
+                        heat.
+                        Throughout most of bitcoin mining’s history, miners were concerned with containing and
+                        discarding their heat exhaust.
+                        But that trend has noticeably changed over the past several years as miners are now working to
+                        harness and use the heat
+                        their machines generate. Heat exhaust reuse offers significant environmental and economical
+                        benefits for individual and
+                        corporate miners.</p>
+                    <p class="a-subheading">Some examples of creative ways miners are reusing their heat exhaust:</p>
+                    <ul class="a-list">
+                        <li class="a-list-item">
+                            <strong>Pools: </strong>several miners have designed systems that used heat exchangers to
+                            transfer the heat generated from their machines
+                            to warm their swimming pools. Here’s one example of a large swimming pool heated by mining
+                            machines. One of the most
+                            iconic versions of this use case for heat is the <a class="a-link">SPA-256</a> designed by
+                            Jesse Peltan of HODL Ranch.
+                        </li>
+                        <li class="a-list-item">
+                            <strong>Greenhouses: </strong>Using heat exhaust to warm a greenhouse is an incredibly
+                            effective means of maintaining a healthy enclosed
+                            garden. <a class="a-link">One example</a> of this is filmed by Kiernan Wright and shared to
+                            Twitter, showing his site kept to 86 degrees
+                            Fahrenheit.
+                        </li>
+                    </ul>
+
+                    <a class="a-link">Look at this example here </a>
+
+                    <div class="a-image">
+                        <div class="img-wrapper">
+                            <img class="img-cover" src="../assets/images/blog.jpg" alt="Blog Image">
+                        </div>
+                        <p class="image-description">
+                            <span>Picture 1.</span>
+                            Example of a picture of hardware.
+                        </p>
+                    </div>
+
+                    <p class="a-text">Lorem ipsum dolor sit amet consectetur. Facilisis vehicula eleifend aliquam massa
+                        leo egestas consectetur. Nunc aliquam
+                        mauris molestie massa consectetur amet nunc pretium pretium. Consectetur molestie tortor sed
+                        magna enim tellus diam. A
+                        integer montes cras neque id.</p>
+
+                    <div class="a-caption">
+                        <p class="a-caption-text">“This is a caption. Pulvinar quisque ipsum rhoncus et. Sollicitudin
+                            mauris nunc quisque facilisi malesuada et dictum.
+                            Nulla pulvinar auctor nulla leo tortor consequat. Arcu ipsum blandit quisque suscipit.
+                            Pellentesque sapien non at sit
+                            sit in sit et. Tortor sed consectetur aliquet cursus.”</p>
+                        <p class="a-caption-author">The Bitcoin Journal, John Doe</p>
+                    </div>
+
+                    <p class="a-heading">Conclusion</p>
+
+                    <p class="a-text">Lorem ipsum dolor sit amet consectetur. Facilisis vehicula eleifend aliquam massa
+                        leo egestas
+                        consectetur. Nunc aliquam
+                        mauris molestie massa consectetur amet nunc pretium pretium. Consectetur molestie tortor sed
+                        magna enim tellus diam.
+                        A
+                        integer montes cras neque id.</p>
+
+                </section>
+
+                <!-- Footer -->
+
+                <div class="article-footer">
+                    <a class="btn-secondary" href="blog.html">Back to blog list</a>
+                </div>
+
 
             </div>
 
@@ -150,7 +244,7 @@
 
     <footer>
         <div class="logo-wrapper">
-            <img src="../assets/images/logo_wizardsardine.svg" alt="Revault Logo">
+            <img src="assets/images/revault_logo_white.svg" alt="Revault Logo">
             <p id="credits"> © 2022 Wizardsardine LDA</p>
         </div>
 
@@ -186,9 +280,9 @@
                 <h6>Follow us</h6>
                 <div class="icons-holder">
                     <a title="Github" href="https://github.com/revault" target="_blank" class="a-icon"><img
-                            src="../assets/images/icon_github_white.svg" alt="Github"></a>
+                            src="assets/images/icon_github_white.svg" alt="Github"></a>
                     <a title="Twitter" href="https://twitter.com/revaultdev" target="_blank" class="a-icon"><img
-                            src="../assets/images/icon_twitter.svg" alt="Twitter"></a>
+                            src="assets/images/icon_twitter.svg" alt="Twitter"></a>
                 </div>
             </div>
         </div>
