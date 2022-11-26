@@ -1,0 +1,24 @@
+@import url(/Users/indiarodeia/Documents/01_PROJECTS - INDIE WORK/01_WEBSITES/01_REVAULT/02_WIZARD-SARDINE-WEBSITE/03_DEVELOPMENT/wizard-sardine-web/assets/font/font.css);
+:root {
+  --black: #2e2e2e;
+  --revault_gradient: linear-gradient(44.91deg, #ef445f -5.12%, #ff8415 92.6%);
+  --grey: #7b7b7b;
+  --lightgrey: #f5f5f5;
+  --white: #ffffff;
+  --shadowCards: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
+  --light: 300;
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
+  /* New variables */
+  --grey-header: #1d1d1d;
+}
+
+/* font variables */
+/* $light: "Satoshi Light", sans-serif;
+$regular: "Satoshi Regular", sans-serif;
+$medium: "Satoshi Medium", sans-serif;
+$bold: "Satoshi Bold", sans-serif;
+$black: "Satoshi Black", sans-serif; */
+/*# sourceMappingURL=variables.css.map */
