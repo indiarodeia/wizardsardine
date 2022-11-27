@@ -1,4 +1,4 @@
-@import url(/Users/indiarodeia/Documents/01_PROJECTS - INDIE WORK/01_WEBSITES/01_REVAULT/02_WIZARD-SARDINE-WEBSITE/03_DEVELOPMENT/wizardsardine/assets/font/font.css);
+@import "../assets/font/font.css";
 :root {
   --black: #2e2e2e;
   --revault_gradient: linear-gradient(44.91deg, #ef445f -5.12%, #ff8415 92.6%);
@@ -13,5 +13,4 @@
   --bold: 700;
   /* New variables */
   --grey-header: #1d1d1d;
-}
-/*# sourceMappingURL=variables.css.map */
+}/*# sourceMappingURL=variables.css.map */

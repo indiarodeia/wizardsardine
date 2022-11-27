@@ -81,16 +81,20 @@
   padding: 3% 5%;
   @include flex(flex-start, stretch, column);
 
+  /* TODO: fix on scroll */
   .article-actions {
     width: 100%;
     @include flex(space-between, center);
-    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto 20px;
   }
 
   .article {
     border-radius: 8px;
     background-color: #171717;
     padding: 3% 5%;
+    max-width: 1200px;
+    margin: auto;
 
     /****** Header ******/
     .article-header {

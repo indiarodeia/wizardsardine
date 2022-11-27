@@ -1,4 +1,4 @@
-@import url(/Users/indiarodeia/Documents/01_PROJECTS - INDIE WORK/01_WEBSITES/01_REVAULT/02_WIZARD-SARDINE-WEBSITE/03_DEVELOPMENT/wizardsardine/assets/font/font.css);
+@import "../assets/font/font.css";
 :root {
   --black: #2e2e2e;
   --revault_gradient: linear-gradient(44.91deg, #ef445f -5.12%, #ff8415 92.6%);
@@ -19,137 +19,71 @@
 #blog-page {
   height: auto;
   background: #282929;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   padding: 3% 10%;
 }
-
 #blog-page h1.title-blog {
   font-family: "Satoshi", sans-serif;
   font-weight: 900;
   font-size: 48px;
   color: #fff;
 }
-
 #blog-page .articles-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 20px;
   margin-top: 3%;
 }
-
 #blog-page .articles-wrapper .article-link {
   height: 100%;
   width: 100%;
 }
-
 #blog-page .articles-wrapper .article {
   width: 100%;
   height: 200px;
   background-color: #1e1e1e;
   border-radius: 8px;
   overflow: hidden;
-  -webkit-filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-          filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
-  display: -webkit-box;
-  display: -ms-flexbox;
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
   display: flex;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
   justify-content: space-between;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
-
 #blog-page .articles-wrapper .article:hover {
   background-color: #151515;
 }
-
 #blog-page .articles-wrapper .article .img-wrapper {
   aspect-ratio: 1/1;
   width: auto;
   height: 100%;
 }
-
 #blog-page .articles-wrapper .article .article-details {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
   justify-content: space-between;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
+  flex-basis: 100%;
   padding: 20px;
 }
-
 #blog-page .articles-wrapper .article .article-details .infos {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
-
 #blog-page .articles-wrapper .article .article-details .infos .chips-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   gap: 8px;
 }
-
 #blog-page .articles-wrapper .article .article-details .article-title {
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
@@ -157,14 +91,12 @@
   color: #fff;
   margin-bottom: 8px;
 }
-
 #blog-page .articles-wrapper .article .article-details .article-description {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #868686;
 }
-
 #blog-page .articles-wrapper .article .article-details .btn-read {
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
@@ -172,7 +104,6 @@
   color: #c1c1c1;
   text-decoration: underline;
 }
-
 @media (hover: hover) {
   #blog-page .articles-wrapper .article .article-details .btn-read:hover {
     color: #b0def0;
@@ -183,168 +114,99 @@
 #article-page {
   background-color: #202020;
   padding: 3% 5%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
+  /* TODO: fix on scroll */
 }
-
 #article-page .article-actions {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-between;
-  -ms-flex-pack: space-between;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
-  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: 0 auto 20px;
 }
-
 #article-page .article {
   border-radius: 8px;
   background-color: #171717;
   padding: 3% 5%;
+  max-width: 1200px;
+  margin: auto;
   /****** Header ******/
   /****** Content ******/
   /* Footer */
 }
-
 #article-page .article .article-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
 }
-
 #article-page .article .article-header .chips-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-end;
-  -ms-flex-pack: flex-end;
   justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
   gap: 10px;
 }
-
 #article-page .article .article-header .chips-wrapper .chip {
   background-color: #282828;
 }
-
 #article-page .article .article-header .article-title {
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: #fff;
 }
-
 #article-page .article .article-header .article-description {
   font-family: "Satoshi", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #868686;
 }
-
 #article-page .article .article-header .cover-img {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   margin-top: 6px;
 }
-
 #article-page .article .article-header .cover-img .cover-img-wrapper {
   max-height: 580px;
   width: 100%;
   overflow: hidden;
   border-radius: 4px;
 }
-
 #article-page .article .article-content {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 30px;
   margin-top: 40px;
 }
-
 #article-page .article .article-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
   padding: 5%;
   border-top: 1px dotted #868686;
   margin-top: 50px;
 }
 
-/* General styles */
+/* General styles (used in blog and article) */
 .date {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #868686;
 }
-
 .date span {
   font-weight: 500;
   color: #939393;
@@ -356,16 +218,8 @@
   font-size: 13px;
   color: #868686;
 }
-
 .image-description span {
   font-weight: 500;
-}
-
-.img-cover {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .chip {
@@ -430,7 +284,6 @@
   color: #5ba9c8;
   text-decoration: underline;
 }
-
 @media (hover: hover) {
   .a-link:hover {
     color: #b0def0;
@@ -439,21 +292,11 @@
 }
 
 .a-image {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: flex-start;
-  -ms-flex-align: flex-start;
   align-items: flex-start;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
 }
-
 .a-image .img-wrapper {
   border-radius: 2px;
   overflow: hidden;
@@ -466,22 +309,12 @@
 .a-caption {
   margin-left: 40px;
   border-left: 4px solid #5ba9c8;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: flex-start;
-  -ms-flex-pack: flex-start;
   justify-content: flex-start;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
   align-items: stretch;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   gap: 6px;
 }
-
 .a-caption .a-caption-text {
   font-family: "Satoshi", sans-serif;
   font-weight: 500;
@@ -492,7 +325,6 @@
   letter-spacing: 0.03em;
   margin-left: 16px;
 }
-
 .a-caption .a-caption-author {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
@@ -501,7 +333,5 @@
   font-style: italic;
   line-height: 24px;
   letter-spacing: 0.03em;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-}
-/*# sourceMappingURL=blog.css.map */
+  align-self: flex-end;
+}/*# sourceMappingURL=blog.css.map */

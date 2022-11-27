@@ -152,9 +152,10 @@ header {
   .bottom-header {
     height: 50px;
     padding: 0% 5%;
-    background-color: $grey-header;
+    background-color: #151515;
     @include flex(space-between, center);
     width: 100%;
+    border-bottom: 1px solid #0e0e0e;
 
     .logo-and-text {
       @include flex(flex-start, center);
@@ -385,16 +386,10 @@ header {
 section#banner {
   min-height: calc(100vh - 60px);
   padding: 10%;
-  background-color: var(--white);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include flexcenter();
+  background-image: url(../assets/images/bg-banner.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .banner-wrapper {
@@ -460,92 +455,81 @@ p.description {
 /* Footer */
 
 footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding: 5% 10%;
-  background-color: var(--black);
-}
+  @include flex(space-between, center);
+  padding: 4% 10%;
+  background-color: #151515;
 
-.logo-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 20px;
-}
+  .logo-wrapper {
+    @include flex(flex-start, flex-start, column);
+    gap: 12px;
 
-.logo-wrapper img {
-  height: 50px;
-  width: auto;
-}
-p#credits {
-  font-size: 14px;
-  font-size: 1.4rem;
-  color: var(--white);
-  font-weight: var(--light);
-}
+    img {
+      width: 66px;
+      height: auto;
+      align-self: center;
+    }
+    .logo-name {
+      font-family: "Rubik", sans-serif;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.5%;
+      font-size: 26px;
+    }
+    #credits {
+      @include font($light, 14px, #fff);
+    }
+  }
+  .footer-menu {
+    @include flex(flex-end, flex-start);
+    gap: 60px;
 
-.footer-menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
-  gap: 60px;
-}
+    .each-col {
+      h6 {
+        @include font($medium, 14px, rgb(189, 189, 189));
+        margin-bottom: 10px;
+      }
+      ul {
+        @include flex(flex-start, flex-start, column);
+        gap: 12px;
 
-.footer-menu ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  gap: 12px;
-}
-
-.footer-menu li {
-  color: #c7c7c7;
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: var(--light);
-}
-.footer-menu li:hover {
-  color: var(--white);
-}
-.each-col img {
-  width: 30px;
-  height: auto;
-  margin-right: 10px;
-}
-.each-col .icons-holder {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.a-icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+        li {
+          @include font($medium, 15px, rgb(189, 189, 189));
+          &:hover {
+            color: #fff;
+            text-decoration: underline;
+          }
+        }
+        .disabled {
+          color: grey;
+          &:hover {
+            text-decoration: none;
+            color: grey;
+            a {
+              cursor: default;
+            }
+          }
+        }
+      }
+      .icons-holder {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        gap: 10px;
+        .a-icon {
+          @include flexcenter();
+          border-radius: 50%;
+          width: 30px;
+          height: 30px;
+          &:hover {
+            background-color: $blue;
+          }
+          img {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+    }
+  }
 }
