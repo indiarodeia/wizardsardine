@@ -7,6 +7,8 @@
   background: #282929;
   @include flex(flex-start, stretch, column);
   padding: 3% 10%;
+  min-height: 80vh;
+  margin-top: 84px;
 
   h1.title-blog {
     @include font($black, 48px, #fff);
@@ -59,16 +61,6 @@
         .article-description {
           @include font($regular, 16px, $grey);
         }
-
-        .btn-read {
-          @include font($bold, 16px, #c1c1c1);
-          text-decoration: underline;
-          @media (hover: hover) {
-            &:hover {
-              color: $light-blue;
-            }
-          }
-        }
       }
     }
   }
@@ -80,6 +72,8 @@
   background-color: #202020;
   padding: 3% 5%;
   @include flex(flex-start, stretch, column);
+  min-height: 80vh;
+  margin-top: 84px;
 
   /* TODO: fix on scroll */
   .article-actions {
@@ -162,15 +156,6 @@
   span {
     font-weight: $medium;
   }
-}
-
-.chip {
-  background-color: #171717;
-  border-radius: 4px;
-  padding: 6px 14px;
-  @include font($bold, 15px, $light-blue);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 /* Classes for article */

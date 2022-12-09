@@ -33,8 +33,6 @@ main {
 
 section {
   width: 100vw;
-  min-height: 80vh;
-  margin-top: 84px;
 }
 
 ul {
@@ -59,6 +57,27 @@ a:active {
 
 /******************* Text styles ******************/
 
+h1 {
+  @include font($black, 64px, #fff);
+  line-height: 114%;
+  /* or 73px */
+  letter-spacing: 0.01em;
+
+  @media screen and (max-width: 768px) {
+    font-size: 46px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 42px;
+  }
+}
+
+h2 {
+  @include font($black, 52px, #fff);
+  line-height: 59px;
+  letter-spacing: 0.01em;
+  text-align: center;
+}
+
 p {
   font-size: 15px;
   font-size: 1.5rem;
@@ -76,6 +95,11 @@ p {
   gap: 6px;
   width: fit-content;
   padding: 0 12px;
+  cursor: pointer;
+
+  &:focus {
+    color: #fff;
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -101,6 +125,25 @@ p {
       background-color: $blue;
       filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
     }
+  }
+}
+
+.btn-read {
+  @include font($bold, 16px, #c1c1c1);
+  text-decoration: underline;
+  @media (hover: hover) {
+    &:hover {
+      color: $light-blue;
+    }
+  }
+}
+
+.btn-icon {
+  padding: 0 30px;
+  img {
+    width: auto;
+    height: auto;
+    max-height: 14px;
   }
 }
 
@@ -381,83 +424,228 @@ header {
   left: 50%;
 }
 
-/* 1st Section - Banner */
+/********************* 1st Section - Banner ***************************************************************/
 
 section#banner {
   min-height: calc(100vh - 60px);
-  padding: 10%;
-  @include flexcenter();
+  @include flex(stretch, stretch);
   background-image: url(../assets/images/bg-banner.jpg);
   background-size: cover;
   background-attachment: fixed;
+  margin-top: 84px;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.537);
+    width: 100%;
+    height: auto;
+    padding: 10%;
+  }
+  .banner-wrapper {
+    @include flex(center, flex-start, column);
+    max-width: 700px;
+    width: 100%;
+
+    p.description {
+      @include font($bold, 18px, #8ca7b1);
+      line-height: 26px;
+      margin: 20px 0;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      @media screen and (max-width: 500px) {
+        margin: 10px 0;
+      }
+    }
+  }
 }
 
-.banner-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 40px;
-  max-width: 1100px;
+/********************* 2st Section - Solutions ***************************************************************/
+
+#solutions {
+  background-image: url(../assets/images/bg-solutions.jpg);
+  background-size: cover;
+  margin: 0;
+  padding: 6% 10%;
+  @include flex(center, stretch, column);
+  gap: 60px;
+  min-height: 80vh;
+
+  .img-holder.revault {
+    background-image: url(../assets/images/cover_revault.jpg);
+  }
+  .img-holder.liana {
+    background-image: url(../assets/images/cover_liana.jpg);
+  }
+  .img-holder.bunker {
+    background-image: url(../assets/images/cover_bunker.jpg);
+  }
+
+  .img-holder {
+    background-position: center;
+    background-size: cover;
+    @include flex(stretch, stretch);
+    aspect-ratio: 1/1;
+
+    .overlay {
+      width: 100%;
+      height: auto;
+      background: rgba(30, 30, 30, 0.56);
+      @include flexcenter();
+
+      img {
+        width: 100%;
+        max-width: 60%;
+        max-height: 46px;
+      }
+    }
+  }
+  .card-text-area {
+    background-color: #181818;
+
+    h4 {
+      @include font($black, 36px, #fcfcfc);
+      line-height: 49px;
+      letter-spacing: 0.01em;
+    }
+    p {
+      @include font($regular, 15px, #a8a8a8);
+      line-height: 22px;
+      letter-spacing: 0.01em;
+    }
+  }
+}
+.corner-coming-soon {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 100%;
+  height: 60%;
+  background: rgba(0, 0, 0, 0.72);
+  clip-path: polygon(0 0, 100% 50%, 100% 0);
+  @include flex(flex-start, flex-end, column);
+  padding: 10px 16px;
+
+  h5 {
+    @include font($bold, 22px, #e6e6e6);
+  }
+  span {
+    @include font($regular, 15px, #a6a6a6);
+  }
+}
+
+/********************* 3rd Section - Contact  ***************************************************************/
+
+#contact {
+  background-color: #bbc5c9;
+  padding: 6% 10%;
+  @include flex(center, center, column);
+  gap: 20px;
+
+  h2 {
+    color: #131c20;
+  }
+  .contact-description {
+    @include font($bold, 18px, #4a4a4a);
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    max-width: 500px;
+  }
+}
+
+/********************* 4th Section - Blog - Recent  ***************************************************************/
+
+#blog-recent {
+  background-color: #bbc5c9;
+  padding: 6% 10%;
+  background-color: #151515;
+  gap: 60px;
+  @include flex(center, stretch, column);
+
+  h2 {
+    text-align: left;
+    color: #fff;
+  }
+
+  .card {
+    background-color: #1e1e1e;
+
+    .card-text-area {
+      @include flex(flex-start, stretch, column);
+      gap: 10px;
+    }
+
+    .img-holder {
+      position: relative;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .chips-wrapper {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        @include flex(flex-end, center);
+        gap: 10px;
+
+        .chip {
+          font-size: 13px;
+          padding: 4px 10px;
+        }
+      }
+    }
+    h4 {
+      @include font($bold, 24px, #fff);
+      line-height: 31px;
+      letter-spacing: 0.01em;
+    }
+    p {
+      @include font($medium, 18px, #868686);
+      line-height: 24px;
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+/* Used in multiple sections */
+.flex-grid {
+  @include flex(center, stretch);
+  gap: 5%;
+  max-width: 1000px;
   margin: auto;
-  width: 100%;
+  .card {
+    @include flex(flex-start, stretch, column);
+    width: 33.3%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+
+    .card-text-area {
+      padding: 20px;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
 }
 
-.intro-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  max-width: 450px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+.chip {
+  background-color: #171717;
+  border-radius: 4px;
+  padding: 6px 14px;
+  @include font($bold, 15px, $light-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.img-holder-banner {
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  max-width: 450px;
-}
-
-.img-holder-banner img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
-}
-
-.intro-container .btn-primary {
-  width: 100%;
-}
-
-p.description {
-  font-size: 16px;
-  font-size: 1.6rem;
-  color: var(--black);
-  line-height: 26px;
-  margin: 20px 0;
-}
-
-.btn-2 {
-  display: none;
-}
-
-/* Footer */
+/********************* Footer ***************************************************************/
 
 footer {
   @include flex(space-between, center);
   padding: 4% 10%;
-  background-color: #151515;
+  background-color: #0e0e0e;
+  border-top: 1px solid;
 
   .logo-wrapper {
     @include flex(flex-start, flex-start, column);
@@ -533,3 +721,5 @@ footer {
     }
   }
 }
+
+/********************* Media Queries ************************************************************/

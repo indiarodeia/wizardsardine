@@ -24,6 +24,8 @@
   align-items: stretch;
   flex-direction: column;
   padding: 3% 10%;
+  min-height: 80vh;
+  margin-top: 84px;
 }
 #blog-page h1.title-blog {
   font-family: "Satoshi", sans-serif;
@@ -97,18 +99,6 @@
   font-size: 16px;
   color: #868686;
 }
-#blog-page .articles-wrapper .article .article-details .btn-read {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: #c1c1c1;
-  text-decoration: underline;
-}
-@media (hover: hover) {
-  #blog-page .articles-wrapper .article .article-details .btn-read:hover {
-    color: #b0def0;
-  }
-}
 
 /* ARTICLE PAGE STYLES */
 #article-page {
@@ -118,6 +108,8 @@
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: column;
+  min-height: 80vh;
+  margin-top: 84px;
   /* TODO: fix on scroll */
 }
 #article-page .article-actions {
@@ -220,18 +212,6 @@
 }
 .image-description span {
   font-weight: 500;
-}
-
-.chip {
-  background-color: #171717;
-  border-radius: 4px;
-  padding: 6px 14px;
-  font-family: "Satoshi", sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: #b0def0;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
 }
 
 /* Classes for article */
