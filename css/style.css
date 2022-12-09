@@ -100,6 +100,12 @@ h2 {
   letter-spacing: 0.01em;
   text-align: center;
 }
+@media screen and (max-width: 850px) {
+  h2 {
+    font-size: 38px;
+    line-height: 42px;
+  }
+}
 
 p {
   font-size: 15px;
@@ -217,6 +223,11 @@ header .top-header {
   flex-direction: row;
   border-bottom: 1px solid #000;
 }
+@media screen and (max-width: 520px) {
+  header .top-header {
+    padding: 0 3%;
+  }
+}
 header .top-header ul {
   display: flex;
   justify-content: flex-start;
@@ -224,16 +235,36 @@ header .top-header ul {
   flex-direction: row;
   gap: 36px;
 }
+@media screen and (max-width: 520px) {
+  header .top-header ul {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 400px) {
+  header .top-header ul {
+    gap: 10px;
+  }
+}
 header .top-header .product-menu-item a {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #646363;
+  white-space: nowrap;
+}
+@media screen and (max-width: 400px) {
+  header .top-header .product-menu-item a {
+    font-size: 13px;
+  }
 }
 @media (hover: hover) {
   header .top-header .product-menu-item a:hover {
     color: #b0def0;
   }
+}
+header .top-header .product-menu-item.disabled a {
+  color: #646363;
+  cursor: default;
 }
 header .top-header .product-menu-item.active a {
   color: #c3dfea;
@@ -250,6 +281,11 @@ header .bottom-header {
   border-bottom: 1px solid #0e0e0e;
   /* revisto até aqui */
 }
+@media screen and (max-width: 520px) {
+  header .bottom-header {
+    padding: 0 3%;
+  }
+}
 header .bottom-header .logo-and-text {
   display: flex;
   justify-content: flex-start;
@@ -264,6 +300,16 @@ header .bottom-header .logo-and-text #main-logo {
 header .bottom-header .logo-and-text #logo-name {
   height: 18px;
   width: auto;
+}
+@media screen and (max-width: 520px) {
+  header .bottom-header .logo-and-text #logo-name {
+    height: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  header .bottom-header .logo-and-text #logo-name {
+    display: none;
+  }
 }
 header .bottom-header #desktop-menu ul {
   display: flex;
@@ -487,13 +533,24 @@ section#banner .banner-wrapper p.description {
   background-image: url(../assets/images/bg-solutions.jpg);
   background-size: cover;
   margin: 0;
-  padding: 6% 10%;
+  padding: 6%;
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
-  gap: 60px;
+  gap: 50px;
   min-height: 80vh;
+}
+@media screen and (max-width: 900px) {
+  #solutions {
+    padding: 4% 5%;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #solutions {
+    padding: 10%;
+  }
 }
 #solutions .img-holder.revault {
   background-image: url(../assets/images/cover_revault.jpg);
@@ -512,6 +569,11 @@ section#banner .banner-wrapper p.description {
   align-items: stretch;
   flex-direction: row;
   aspect-ratio: 1/1;
+}
+@media screen and (max-width: 800px) {
+  #solutions .img-holder {
+    aspect-ratio: 1/0.6;
+  }
 }
 #solutions .img-holder .overlay {
   width: 100%;
@@ -538,6 +600,11 @@ section#banner .banner-wrapper p.description {
   line-height: 49px;
   letter-spacing: 0.01em;
 }
+@media screen and (max-width: 850px) {
+  #solutions .card-text-area h4 {
+    font-size: 28px;
+  }
+}
 #solutions .card-text-area p {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
@@ -560,7 +627,7 @@ section#banner .banner-wrapper p.description {
   justify-content: flex-start;
   align-items: flex-end;
   flex-direction: column;
-  padding: 10px 16px;
+  padding: 10px 10px;
 }
 .corner-coming-soon h5 {
   font-family: "Satoshi", sans-serif;
@@ -585,6 +652,12 @@ section#banner .banner-wrapper p.description {
   flex-direction: column;
   gap: 20px;
 }
+@media screen and (max-width: 600px) {
+  #contact {
+    padding: 5%;
+    gap: 10px;
+  }
+}
 #contact h2 {
   color: #131c20;
 }
@@ -598,17 +671,27 @@ section#banner .banner-wrapper p.description {
   text-align: center;
   max-width: 500px;
 }
-
 /********************* 4th Section - Blog - Recent  ***************************************************************/
 #blog-recent {
   background-color: #bbc5c9;
-  padding: 6% 10%;
+  padding: 6% 5%;
   background-color: #151515;
   gap: 60px;
   display: flex;
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
+}
+@media screen and (max-width: 900px) {
+  #blog-recent {
+    padding: 4% 5%;
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #blog-recent {
+    padding: 10%;
+  }
 }
 #blog-recent h2 {
   text-align: left;
@@ -620,7 +703,7 @@ section#banner .banner-wrapper p.description {
 #blog-recent .card .card-text-area {
   display: flex;
   justify-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
   flex-direction: column;
   gap: 10px;
 }
@@ -655,6 +738,12 @@ section#banner .banner-wrapper p.description {
   line-height: 31px;
   letter-spacing: 0.01em;
 }
+@media screen and (max-width: 600px) {
+  #blog-recent .card h4 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
 #blog-recent .card p {
   font-family: "Satoshi", sans-serif;
   font-weight: 500;
@@ -662,6 +751,12 @@ section#banner .banner-wrapper p.description {
   color: #868686;
   line-height: 24px;
   letter-spacing: 0.01em;
+}
+@media screen and (max-width: 600px) {
+  #blog-recent .card p {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
 /* Used in multiple sections */
@@ -674,6 +769,16 @@ section#banner .banner-wrapper p.description {
   max-width: 1000px;
   margin: auto;
 }
+@media screen and (max-width: 900px) {
+  .flex-grid {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .flex-grid {
+    flex-wrap: wrap;
+  }
+}
 .flex-grid .card {
   display: flex;
   justify-content: flex-start;
@@ -683,6 +788,13 @@ section#banner .banner-wrapper p.description {
   border-radius: 4px;
   overflow: hidden;
   position: relative;
+  min-width: 240px;
+}
+@media screen and (max-width: 800px) {
+  .flex-grid .card {
+    max-width: 350px;
+    width: 100%;
+  }
 }
 .flex-grid .card .card-text-area {
   padding: 20px;
@@ -711,12 +823,30 @@ footer {
   background-color: #0e0e0e;
   border-top: 1px solid;
 }
+@media screen and (max-width: 700px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  footer {
+    gap: 40px;
+  }
+}
 footer .logo-wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   gap: 12px;
+}
+@media screen and (max-width: 500px) {
+  footer .logo-wrapper {
+    align-items: center;
+  }
 }
 footer .logo-wrapper img {
   width: 66px;
@@ -743,6 +873,13 @@ footer .footer-menu {
   align-items: flex-start;
   flex-direction: row;
   gap: 60px;
+}
+@media screen and (max-width: 500px) {
+  footer .footer-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 }
 footer .footer-menu .each-col h6 {
   font-family: "Satoshi", sans-serif;

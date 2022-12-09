@@ -76,6 +76,11 @@ h2 {
   line-height: 59px;
   letter-spacing: 0.01em;
   text-align: center;
+
+  @media screen and (max-width: 850px) {
+    font-size: 38px;
+    line-height: 42px;
+  }
 }
 
 p {
@@ -174,18 +179,39 @@ header {
     @include flex(flex-start, center);
     border-bottom: 1px solid #000;
 
+    @media screen and (max-width: 520px) {
+      padding: 0 3%;
+    }
+
     ul {
       @include flex(flex-start, center);
       gap: 36px;
+
+      @media screen and (max-width: 520px) {
+        gap: 20px;
+      }
+      @media screen and (max-width: 400px) {
+        gap: 10px;
+      }
     }
 
     .product-menu-item a {
       @include font($regular, 14px, #646363);
+      white-space: nowrap;
+
+      @media screen and (max-width: 400px) {
+        font-size: 13px;
+      }
+
       @media (hover: hover) {
         &:hover {
           color: $light-blue;
         }
       }
+    }
+    .product-menu-item.disabled a {
+      color: #646363;
+      cursor: default;
     }
     .product-menu-item.active a {
       color: $lighter-blue;
@@ -200,6 +226,10 @@ header {
     width: 100%;
     border-bottom: 1px solid #0e0e0e;
 
+    @media screen and (max-width: 520px) {
+      padding: 0 3%;
+    }
+
     .logo-and-text {
       @include flex(flex-start, center);
       gap: 10px;
@@ -211,6 +241,13 @@ header {
       #logo-name {
         height: 18px;
         width: auto;
+
+        @media screen and (max-width: 520px) {
+          height: 14px;
+        }
+        @media screen and (max-width: 400px) {
+          display: none;
+        }
       }
     }
 
@@ -464,10 +501,19 @@ section#banner {
   background-image: url(../assets/images/bg-solutions.jpg);
   background-size: cover;
   margin: 0;
-  padding: 6% 10%;
+  padding: 6%;
   @include flex(center, stretch, column);
-  gap: 60px;
+  gap: 50px;
   min-height: 80vh;
+
+  @media screen and (max-width: 900px) {
+    padding: 4% 5%;
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10%;
+  }
 
   .img-holder.revault {
     background-image: url(../assets/images/cover_revault.jpg);
@@ -484,6 +530,10 @@ section#banner {
     background-size: cover;
     @include flex(stretch, stretch);
     aspect-ratio: 1/1;
+
+    @media screen and (max-width: 800px) {
+      aspect-ratio: 1/0.6;
+    }
 
     .overlay {
       width: 100%;
@@ -505,6 +555,10 @@ section#banner {
       @include font($black, 36px, #fcfcfc);
       line-height: 49px;
       letter-spacing: 0.01em;
+
+      @media screen and (max-width: 850px) {
+        font-size: 28px;
+      }
     }
     p {
       @include font($regular, 15px, #a8a8a8);
@@ -522,7 +576,7 @@ section#banner {
   background: rgba(0, 0, 0, 0.72);
   clip-path: polygon(0 0, 100% 50%, 100% 0);
   @include flex(flex-start, flex-end, column);
-  padding: 10px 16px;
+  padding: 10px 10px;
 
   h5 {
     @include font($bold, 22px, #e6e6e6);
@@ -540,15 +594,24 @@ section#banner {
   @include flex(center, center, column);
   gap: 20px;
 
+  @media screen and (max-width: 600px) {
+    padding: 5%;
+    gap: 10px;
+  }
+
   h2 {
     color: #131c20;
   }
+
   .contact-description {
     @include font($bold, 18px, #4a4a4a);
     line-height: 24px;
     letter-spacing: 0.01em;
     text-align: center;
     max-width: 500px;
+
+    @media screen and (max-width: 600px) {
+    }
   }
 }
 
@@ -556,10 +619,19 @@ section#banner {
 
 #blog-recent {
   background-color: #bbc5c9;
-  padding: 6% 10%;
+  padding: 6% 5%;
   background-color: #151515;
   gap: 60px;
   @include flex(center, stretch, column);
+
+  @media screen and (max-width: 900px) {
+    padding: 4% 5%;
+    gap: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 10%;
+  }
 
   h2 {
     text-align: left;
@@ -570,7 +642,7 @@ section#banner {
     background-color: #1e1e1e;
 
     .card-text-area {
-      @include flex(flex-start, stretch, column);
+      @include flex(flex-start, flex-start, column);
       gap: 10px;
     }
 
@@ -599,11 +671,21 @@ section#banner {
       @include font($bold, 24px, #fff);
       line-height: 31px;
       letter-spacing: 0.01em;
+
+      @media screen and (max-width: 600px) {
+        font-size: 22px;
+        line-height: 28px;
+      }
     }
     p {
       @include font($medium, 18px, #868686);
       line-height: 24px;
       letter-spacing: 0.01em;
+
+      @media screen and (max-width: 600px) {
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
 }
@@ -614,12 +696,27 @@ section#banner {
   gap: 5%;
   max-width: 1000px;
   margin: auto;
+
+  @media screen and (max-width: 900px) {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 800px) {
+    flex-wrap: wrap;
+  }
+
   .card {
     @include flex(flex-start, stretch, column);
     width: 33.3%;
     border-radius: 4px;
     overflow: hidden;
     position: relative;
+    min-width: 240px;
+
+    @media screen and (max-width: 800px) {
+      max-width: 350px;
+      width: 100%;
+    }
 
     .card-text-area {
       padding: 20px;
@@ -647,9 +744,23 @@ footer {
   background-color: #0e0e0e;
   border-top: 1px solid;
 
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    padding: 10%;
+  }
+  @media screen and (max-width: 500px) {
+    gap: 40px;
+  }
+
   .logo-wrapper {
     @include flex(flex-start, flex-start, column);
     gap: 12px;
+
+    @media screen and (max-width: 500px) {
+      align-items: center;
+    }
 
     img {
       width: 66px;
@@ -671,6 +782,12 @@ footer {
   .footer-menu {
     @include flex(flex-end, flex-start);
     gap: 60px;
+
+    @media screen and (max-width: 500px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
 
     .each-col {
       h6 {
