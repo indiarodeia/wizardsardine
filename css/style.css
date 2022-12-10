@@ -133,14 +133,20 @@ p {
   padding: 0 12px;
   cursor: pointer;
 }
-.btn-primary:focus {
+.btn-primary:focus, .btn-primary:visited {
   color: #fff;
 }
 @media (hover: hover) {
   .btn-primary:hover {
     background-color: #414141;
-    color: #c3dfea;
+    background: linear-gradient(44.91deg, #555498 -5.12%, #7fa0f5 49.85%, #4eaace 92.6%);
+    color: #fff;
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-primary {
+    font-size: 16px;
   }
 }
 
@@ -164,8 +170,14 @@ p {
 }
 @media (hover: hover) {
   .btn-secondary:hover {
-    background-color: #5ba9c8;
+    background: linear-gradient(44.91deg, #555498 -5.12%, #7fa0f5 49.85%, #4eaace 92.6%);
+    color: #fff;
     filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
+  }
+}
+@media screen and (max-width: 768px) {
+  .btn-secondary {
+    font-size: 16px;
   }
 }
 
@@ -193,6 +205,11 @@ p {
   height: auto;
   max-height: 14px;
 }
+@media (hover: hover) {
+  .btn-icon:hover {
+    color: inherit;
+  }
+}
 
 /******************* Images ******************/
 .img-cover {
@@ -200,6 +217,34 @@ p {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/****************************************** General ******************************************/
+/* Used in blog page and article page */
+.date {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #868686;
+}
+.date span {
+  font-weight: 500;
+  color: #939393;
+}
+@media screen and (max-width: 768px) {
+  .date {
+    font-size: 14px;
+  }
+}
+
+.image-description {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: #868686;
+}
+.image-description span {
+  font-weight: 500;
 }
 
 /****************************************** Header ******************************************/
@@ -532,8 +577,9 @@ section#banner .banner-wrapper p.description {
 }
 
 /********************* 2st Section - Solutions ***************************************************************/
+/* TODO: change this for a different layout */
 #solutions {
-  background-image: url(../assets/images/bg-solutions.jpg);
+  background-color: #0c0c0c;
   background-size: cover;
   margin: 0;
   padding: 6%;
@@ -675,6 +721,7 @@ section#banner .banner-wrapper p.description {
   max-width: 500px;
 }
 /********************* 4th Section - Blog - Recent  ***************************************************************/
+/* TODO: fix this media queries better */
 #blog-recent {
   background-color: #bbc5c9;
   padding: 6% 5%;
@@ -684,6 +731,7 @@ section#banner .banner-wrapper p.description {
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
+  background-image: url(../assets/images/bg-solutions.jpg);
 }
 @media screen and (max-width: 900px) {
   #blog-recent {

@@ -13,6 +13,9 @@
   @media screen and (max-width: 900px) {
     padding: 5% 5% 10% 5%;
   }
+  @media screen and (max-width: 768px) {
+    padding: 3% 5% 10% 5%;
+  }
 
   h1.title-blog {
     @include font($black, 48px, #fff);
@@ -42,8 +45,10 @@
       background-color: #1e1e1e;
       border-radius: 8px;
       overflow: hidden;
-      filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+      //  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
       @include flex(space-between, stretch);
+      border: 1px solid #1b1b1b;
+
       &:hover {
         background-color: #151515;
       }
@@ -60,12 +65,12 @@
         aspect-ratio: 1/1;
         width: auto;
         height: 100%;
-        overflow: hidden;
 
         @media screen and (max-width: 768px) {
           aspect-ratio: auto;
           width: 30%;
           height: auto;
+          overflow: hidden;
         }
 
         @media screen and (max-width: 550px) {
@@ -137,174 +142,5 @@
         }
       }
     }
-  }
-}
-
-/* ARTICLE PAGE STYLES */
-
-#article-page {
-  background-color: #202020;
-  padding: 3% 5%;
-  @include flex(flex-start, stretch, column);
-  min-height: 80vh;
-  margin-top: 84px;
-
-  /* TODO: fix on scroll */
-  .article-actions {
-    width: 100%;
-    @include flex(space-between, center);
-    max-width: 1200px;
-    margin: 0 auto 20px;
-  }
-
-  .article {
-    border-radius: 8px;
-    background-color: #171717;
-    padding: 3% 5%;
-    max-width: 1200px;
-    margin: auto;
-
-    /****** Header ******/
-    .article-header {
-      @include flex(flex-start, stretch, column);
-      gap: 10px;
-
-      .chips-wrapper {
-        @include flex(flex-end, center);
-        gap: 10px;
-
-        .chip {
-          background-color: #282828;
-        }
-      }
-
-      .article-title {
-        @include font($bold, 32px, #fff);
-      }
-      .article-description {
-        @include font($medium, 18px, $grey);
-      }
-
-      .cover-img {
-        @include flex(flex-start, stretch, column);
-        margin-top: 6px;
-
-        .cover-img-wrapper {
-          max-height: 580px;
-          width: 100%;
-          overflow: hidden;
-          border-radius: 4px;
-        }
-      }
-    }
-
-    /****** Content ******/
-    .article-content {
-      width: 100%;
-      @include flex(flex-start, stretch, column);
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    /* Footer */
-    .article-footer {
-      @include flexcenter();
-      padding: 5%;
-      border-top: 1px dotted $grey;
-      margin-top: 50px;
-    }
-  }
-}
-
-/* General styles (used in blog and article) */
-.date {
-  @include font($regular, 16px, $grey);
-  span {
-    font-weight: $medium;
-    color: #939393;
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 14px;
-  }
-}
-
-.image-description {
-  @include font($regular, 13px, $grey);
-  span {
-    font-weight: $medium;
-  }
-}
-
-/* Classes for article */
-
-.a-text {
-  @include font($regular, 18px, $text-color);
-  line-height: 24px;
-  letter-spacing: 0.03em;
-}
-.a-heading {
-  @include font($bold, 32px, #fff);
-  margin: 10px 0;
-  letter-spacing: 0.5px;
-}
-.a-subheading {
-  @include font($bold, 22px, #fff);
-  margin: 6px 0;
-  letter-spacing: 0.5px;
-}
-.a-list {
-  list-style-type: disc;
-  margin-left: 40px;
-}
-.a-list-item {
-  @include font($regular, 18px, $text-color);
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  margin-bottom: 12px;
-}
-.a-link {
-  @include font($medium, 18px, $blue);
-  text-decoration: underline;
-
-  @media (hover: hover) {
-    &:hover {
-      color: $light-blue;
-      text-decoration: underline;
-    }
-  }
-}
-.a-image {
-  @include flex(flex-start, flex-start, column);
-
-  .img-wrapper {
-    border-radius: 2px;
-    overflow: hidden;
-    height: 100%;
-    width: 100%;
-
-    /* TODO: definir diferentes classes para diferentes tamanhos de imagem */
-    max-height: 300px;
-  }
-}
-.a-caption {
-  margin-left: 40px;
-  border-left: 4px solid $blue;
-  @include flex(flex-start, stretch, column);
-  gap: 6px;
-
-  .a-caption-text {
-    @include font($medium, 16px, #b4b4b4);
-    font-style: italic;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    margin-left: 16px;
-  }
-  .a-caption-author {
-    @include font($regular, 14px, #b4b4b4);
-    font-style: italic;
-    line-height: 24px;
-    letter-spacing: 0.03em;
-    align-self: flex-end;
   }
 }

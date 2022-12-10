@@ -32,6 +32,11 @@
     padding: 5% 5% 10% 5%;
   }
 }
+@media screen and (max-width: 768px) {
+  #blog-page {
+    padding: 3% 5% 10% 5%;
+  }
+}
 #blog-page h1.title-blog {
   font-family: "Satoshi", sans-serif;
   font-weight: 900;
@@ -68,11 +73,11 @@
   background-color: #1e1e1e;
   border-radius: 8px;
   overflow: hidden;
-  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
   display: flex;
   justify-content: space-between;
   align-items: stretch;
   flex-direction: row;
+  border: 1px solid #1b1b1b;
 }
 #blog-page .articles-wrapper .article:hover {
   background-color: #151515;
@@ -93,13 +98,13 @@
   aspect-ratio: 1/1;
   width: auto;
   height: 100%;
-  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   #blog-page .articles-wrapper .article .img-wrapper {
     aspect-ratio: auto;
     width: 30%;
     height: auto;
+    overflow: hidden;
   }
 }
 @media screen and (max-width: 550px) {
@@ -192,225 +197,4 @@
     font-size: 15px;
     margin-top: 4px;
   }
-}
-
-/* ARTICLE PAGE STYLES */
-#article-page {
-  background-color: #202020;
-  padding: 3% 5%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: column;
-  min-height: 80vh;
-  margin-top: 84px;
-  /* TODO: fix on scroll */
-}
-#article-page .article-actions {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row;
-  max-width: 1200px;
-  margin: 0 auto 20px;
-}
-#article-page .article {
-  border-radius: 8px;
-  background-color: #171717;
-  padding: 3% 5%;
-  max-width: 1200px;
-  margin: auto;
-  /****** Header ******/
-  /****** Content ******/
-  /* Footer */
-}
-#article-page .article .article-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: column;
-  gap: 10px;
-}
-#article-page .article .article-header .chips-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-direction: row;
-  gap: 10px;
-}
-#article-page .article .article-header .chips-wrapper .chip {
-  background-color: #282828;
-}
-#article-page .article .article-header .article-title {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #fff;
-}
-#article-page .article .article-header .article-description {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #868686;
-}
-#article-page .article .article-header .cover-img {
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: column;
-  margin-top: 6px;
-}
-#article-page .article .article-header .cover-img .cover-img-wrapper {
-  max-height: 580px;
-  width: 100%;
-  overflow: hidden;
-  border-radius: 4px;
-}
-#article-page .article .article-content {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: column;
-  gap: 30px;
-  margin-top: 40px;
-}
-#article-page .article .article-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-box-orient: vertical;
-  padding: 5%;
-  border-top: 1px dotted #868686;
-  margin-top: 50px;
-}
-
-/* General styles (used in blog and article) */
-.date {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  color: #868686;
-}
-.date span {
-  font-weight: 500;
-  color: #939393;
-}
-@media screen and (max-width: 768px) {
-  .date {
-    font-size: 14px;
-  }
-}
-
-.image-description {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 400;
-  font-size: 13px;
-  color: #868686;
-}
-.image-description span {
-  font-weight: 500;
-}
-
-/* Classes for article */
-.a-text {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #d0d0d0;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-}
-
-.a-heading {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 700;
-  font-size: 32px;
-  color: #fff;
-  margin: 10px 0;
-  letter-spacing: 0.5px;
-}
-
-.a-subheading {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  color: #fff;
-  margin: 6px 0;
-  letter-spacing: 0.5px;
-}
-
-.a-list {
-  list-style-type: disc;
-  margin-left: 40px;
-}
-
-.a-list-item {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  color: #d0d0d0;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  margin-bottom: 12px;
-}
-
-.a-link {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  color: #5ba9c8;
-  text-decoration: underline;
-}
-@media (hover: hover) {
-  .a-link:hover {
-    color: #b0def0;
-    text-decoration: underline;
-  }
-}
-
-.a-image {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-}
-.a-image .img-wrapper {
-  border-radius: 2px;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-  /* TODO: definir diferentes classes para diferentes tamanhos de imagem */
-  max-height: 300px;
-}
-
-.a-caption {
-  margin-left: 40px;
-  border-left: 4px solid #5ba9c8;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-  flex-direction: column;
-  gap: 6px;
-}
-.a-caption .a-caption-text {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  color: #b4b4b4;
-  font-style: italic;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  margin-left: 16px;
-}
-.a-caption .a-caption-author {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  color: #b4b4b4;
-  font-style: italic;
-  line-height: 24px;
-  letter-spacing: 0.03em;
-  align-self: flex-end;
 }/*# sourceMappingURL=blog.css.map */
