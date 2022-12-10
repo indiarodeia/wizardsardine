@@ -141,6 +141,9 @@ p {
       color: $light-blue;
     }
   }
+  &:focus {
+    color: #fff;
+  }
 }
 
 .btn-icon {
@@ -663,7 +666,6 @@ section#banner {
 
         .chip {
           font-size: 13px;
-          padding: 4px 10px;
         }
       }
     }
@@ -730,8 +732,8 @@ section#banner {
 .chip {
   background-color: #171717;
   border-radius: 4px;
-  padding: 6px 14px;
-  @include font($bold, 15px, $light-blue);
+  padding: 6px 10px;
+  @include font($bold, 14px, $light-blue);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }

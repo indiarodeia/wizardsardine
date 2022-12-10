@@ -181,6 +181,9 @@ p {
     color: #b0def0;
   }
 }
+.btn-read:focus {
+  color: #fff;
+}
 
 .btn-icon {
   padding: 0 30px;
@@ -728,7 +731,6 @@ section#banner .banner-wrapper p.description {
 }
 #blog-recent .card .img-holder .chips-wrapper .chip {
   font-size: 13px;
-  padding: 4px 10px;
 }
 #blog-recent .card h4 {
   font-family: "Satoshi", sans-serif;
@@ -804,10 +806,10 @@ section#banner .banner-wrapper p.description {
 .chip {
   background-color: #171717;
   border-radius: 4px;
-  padding: 6px 14px;
+  padding: 6px 10px;
   font-family: "Satoshi", sans-serif;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 14px;
   color: #b0def0;
   text-transform: uppercase;
   letter-spacing: 0.05em;

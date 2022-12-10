@@ -27,11 +27,28 @@
   min-height: 80vh;
   margin-top: 84px;
 }
+@media screen and (max-width: 900px) {
+  #blog-page {
+    padding: 5% 5% 10% 5%;
+  }
+}
 #blog-page h1.title-blog {
   font-family: "Satoshi", sans-serif;
   font-weight: 900;
   font-size: 48px;
   color: #fff;
+}
+@media screen and (max-width: 900px) {
+  #blog-page h1.title-blog {
+    font-size: 38px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #blog-page h1.title-blog {
+    font-size: 32px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
 }
 #blog-page .articles-wrapper {
   display: flex;
@@ -60,10 +77,36 @@
 #blog-page .articles-wrapper .article:hover {
   background-color: #151515;
 }
+@media screen and (max-width: 768px) {
+  #blog-page .articles-wrapper .article {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 550px) {
+  #blog-page .articles-wrapper .article {
+    flex-direction: column;
+  }
+}
 #blog-page .articles-wrapper .article .img-wrapper {
   aspect-ratio: 1/1;
   width: auto;
   height: 100%;
+  overflow: hidden;
+}
+@media screen and (max-width: 768px) {
+  #blog-page .articles-wrapper .article .img-wrapper {
+    aspect-ratio: auto;
+    width: 30%;
+    height: auto;
+  }
+}
+@media screen and (max-width: 550px) {
+  #blog-page .articles-wrapper .article .img-wrapper {
+    width: 100%;
+    max-height: 160px;
+  }
 }
 #blog-page .articles-wrapper .article .article-details {
   display: flex;
@@ -73,11 +116,31 @@
   flex-basis: 100%;
   padding: 20px;
 }
+@media screen and (max-width: 768px) {
+  #blog-page .articles-wrapper .article .article-details {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #blog-page .articles-wrapper .article .article-details {
+    font-size: 12px;
+  }
+}
 #blog-page .articles-wrapper .article .article-details .infos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+}
+@media screen and (max-width: 768px) {
+  #blog-page .articles-wrapper .article .article-details .infos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 6px;
+  }
 }
 #blog-page .articles-wrapper .article .article-details .infos .chips-wrapper {
   display: flex;
@@ -92,12 +155,43 @@
   font-size: 28px;
   color: #fff;
   margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media screen and (max-width: 900px) {
+  #blog-page .articles-wrapper .article .article-details .article-title {
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 2px;
+  }
+}
+@media screen and (max-width: 550px) {
+  #blog-page .articles-wrapper .article .article-details .article-title {
+    font-size: 20px;
+  }
 }
 #blog-page .articles-wrapper .article .article-details .article-description {
   font-family: "Satoshi", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #868686;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  #blog-page .articles-wrapper .article .article-details .article-description {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #blog-page .articles-wrapper .article .article-details .btn-read {
+    font-size: 15px;
+    margin-top: 4px;
+  }
 }
 
 /* ARTICLE PAGE STYLES */
@@ -202,6 +296,11 @@
 .date span {
   font-weight: 500;
   color: #939393;
+}
+@media screen and (max-width: 768px) {
+  .date {
+    font-size: 14px;
+  }
 }
 
 .image-description {
