@@ -110,12 +110,7 @@ p {
   @media (hover: hover) {
     &:hover {
       background-color: #414141;
-      background: linear-gradient(
-        44.91deg,
-        #555498 -5.12%,
-        #7fa0f5 49.85%,
-        #4eaace 92.6%
-      );
+      background: linear-gradient(44.91deg, #555498 -5.12%, #7fa0f5 49.85%, #4eaace 92.6%);
       color: #fff;
       filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
     }
@@ -137,12 +132,7 @@ p {
 
   @media (hover: hover) {
     &:hover {
-      background: linear-gradient(
-        44.91deg,
-        #555498 -5.12%,
-        #7fa0f5 49.85%,
-        #4eaace 92.6%
-      );
+      background: linear-gradient(44.91deg, #555498 -5.12%, #7fa0f5 49.85%, #4eaace 92.6%);
       color: #fff;
       filter: drop-shadow(0px 0px 2px rgba(0, 0, 0, 0.1));
     }
@@ -530,9 +520,10 @@ section#banner {
     @include flex(center, flex-start, column);
     max-width: 700px;
     width: 100%;
+    height: 80%;
 
     p.description {
-      @include font($bold, 18px, #8ca7b1);
+      @include font($bold, 18px, #b4ced8);
       line-height: 26px;
       margin: 20px 0;
       line-height: 24px;
@@ -546,7 +537,6 @@ section#banner {
 
 /********************* 2st Section - Solutions ***************************************************************/
 
-/* TODO: change this for a different layout */
 #solutions {
   // background-image: url(../assets/images/bg-solutions.jpg);
   background-color: #0c0c0c;
@@ -564,16 +554,6 @@ section#banner {
 
   @media screen and (max-width: 768px) {
     padding: 10%;
-  }
-
-  .img-holder.revault {
-    background-image: url(../assets/images/cover_revault.jpg);
-  }
-  .img-holder.liana {
-    background-image: url(../assets/images/cover_liana.jpg);
-  }
-  .img-holder.bunker {
-    background-image: url(../assets/images/cover_bunker.jpg);
   }
 
   .img-holder {
@@ -598,6 +578,16 @@ section#banner {
         max-height: 46px;
       }
     }
+  }
+
+  .revault {
+    background: url(../assets/images/cover_revault.jpg);
+  }
+  .liana {
+    background-image: url(../assets/images/cover_liana.jpg);
+  }
+  .bunker {
+    background-image: url(../assets/images/cover_bunker.jpg);
   }
   .card-text-area {
     background-color: #181818;
@@ -637,6 +627,140 @@ section#banner {
   }
 }
 
+.each-solution {
+  &:hover {
+    .gradient-wrapper {
+      background: $gradient-ws;
+    }
+  }
+}
+
+#solutions-opt2 {
+  //background-image: url(../assets/images/bg-solutions.jpg);
+  background-color: #0c0c0c;
+  background-size: cover;
+  margin: 0;
+  padding: 6%;
+  @include flex(center, stretch, column);
+  gap: 50px;
+
+  @media screen and (max-width: 600px) {
+    padding-bottom: 80px;
+  }
+
+  .grid-solutions {
+    @include flex(space-around, flex-start);
+    flex-wrap: wrap;
+    gap: 5%;
+    max-width: 1000px;
+    margin: auto;
+
+    @media screen and (max-width: 600px) {
+      @include flex(flex-start, stretch, column);
+      gap: 20px;
+    }
+  }
+
+  .gradient-wrapper {
+    width: 47%;
+    border-radius: 10px;
+    overflow: hidden;
+    min-height: 250px;
+    padding: 4px;
+    @include flex(stretch, stretch);
+    margin-top: 50px;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 30px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 100%;
+      margin-top: 0;
+      min-height: 200px;
+    }
+
+    &:first-child,
+    &:nth-child(3) {
+      margin-top: 0;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        background: $gradient-ws;
+        cursor: pointer;
+      }
+    }
+
+    .each-solution {
+      height: auto;
+      @include flex(stretch, stretch);
+      border-radius: 10px;
+      overflow: hidden;
+
+      .overlay {
+        @include flex(flex-end, flex-start, column);
+        padding: 30px;
+        width: 100%;
+        height: auto;
+        background: rgba(30, 30, 30, 0.56);
+
+        &:hover {
+          background: linear-gradient(
+            44.91deg,
+            rgba(85, 84, 152, 0.5) -5.12%,
+            rgba(127, 160, 245, 0.5) 49.85%,
+            rgba(78, 170, 206, 0.5) 92.6%
+          );
+        }
+      }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+
+      h4 {
+        @include font($black, 38px, #fff);
+
+        @media screen and (max-width: 768px) {
+          font-size: 32px;
+        }
+      }
+      .description-solution {
+        @include font($regular, 18px, #cecece);
+
+        @media screen and (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .overlay:hover {
+    h4,
+    .description-solution {
+      color: rgb(226, 226, 226);
+    }
+  }
+  .revault {
+    background: url(../assets/images/cover_revault.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .liana {
+    background-image: url(../assets/images/cover_liana.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .lianapro {
+    background-image: url(../assets/images/cover_lianapro.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .bunker {
+    background-image: url(../assets/images/cover_bunker.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 /********************* 3rd Section - Contact  ***************************************************************/
 
 #contact {
@@ -646,7 +770,7 @@ section#banner {
   gap: 20px;
 
   @media screen and (max-width: 600px) {
-    padding: 5%;
+    padding: 10% 5%;
     gap: 10px;
   }
 
