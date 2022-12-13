@@ -1,16 +1,9 @@
 @charset "UTF-8";
-@import "../assets/font/font.css";
 :root {
   --black: #2e2e2e;
   --grey: #7b7b7b;
   --lightgrey: #f5f5f5;
   --white: #ffffff;
-  --shadowCards: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
-  --light: 300;
-  --regular: 400;
-  --medium: 500;
-  --semibold: 600;
-  --bold: 700;
   /* New variables */
   --grey-header: #1d1d1d;
 }
@@ -37,7 +30,7 @@ body {
   -webkit-overflow-scrolling: touch;
   width: 100vw;
   height: 100%;
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
 }
 
 main {
@@ -71,7 +64,7 @@ a:active {
 
 /******************* Text styles ******************/
 h1 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 900;
   font-size: 64px;
   color: #fff;
@@ -91,7 +84,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 900;
   font-size: 52px;
   color: #fff;
@@ -117,7 +110,7 @@ p {
   height: 40px;
   border-radius: 2px;
   background-color: #000;
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #fff;
@@ -133,7 +126,7 @@ p {
   cursor: pointer;
 }
 .btn-primary:focus, .btn-primary:visited {
-  color: #fff;
+  color: #fff !important;
 }
 @media (hover: hover) {
   .btn-primary:hover {
@@ -153,7 +146,7 @@ p {
   height: 40px;
   border-radius: 2px;
   background-color: #c3dfea;
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #000;
@@ -181,7 +174,7 @@ p {
 }
 
 .btn-read {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 16px;
   color: #c1c1c1;
@@ -221,7 +214,7 @@ p {
 /****************************************** General ******************************************/
 /* Used in blog page and article page */
 .date {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #868686;
@@ -237,7 +230,7 @@ p {
 }
 
 .image-description {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 13px;
   color: #868686;
@@ -293,7 +286,7 @@ header .top-header ul {
   }
 }
 header .top-header .product-menu-item a {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #646363;
@@ -366,7 +359,7 @@ header .bottom-header #desktop-menu ul {
   gap: 20px;
 }
 header .bottom-header #desktop-menu ul .menu-item a {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #858585;
@@ -561,7 +554,7 @@ section#banner .banner-wrapper {
   height: 80%;
 }
 section#banner .banner-wrapper p.description {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #b4ced8;
@@ -628,11 +621,33 @@ section#banner .banner-wrapper p.description {
   max-width: 60%;
   max-height: 46px;
 }
+#solutions .gradient-wrapper {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 4px;
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: row;
+}
+@media screen and (max-width: 800px) {
+  #solutions .gradient-wrapper {
+    width: auto;
+  }
+}
+@media (hover: hover) {
+  #solutions .gradient-wrapper:hover {
+    background: linear-gradient(44.91deg, #555498 -5.12%, #7fa0f5 49.85%, #4eaace 92.6%);
+    cursor: pointer;
+  }
+}
 #solutions .revault {
-  background: url(../assets/images/cover_revault.jpg);
+  background-image: url(../assets/images/cover_revault.jpg);
 }
 #solutions .liana {
-  background-image: url(../assets/images/cover_liana.jpg);
+  background-image: url(../assets/images/cover_lianapro.jpg);
 }
 #solutions .bunker {
   background-image: url(../assets/images/cover_bunker.jpg);
@@ -641,7 +656,7 @@ section#banner .banner-wrapper p.description {
   background-color: #181818;
 }
 #solutions .card-text-area h4 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 900;
   font-size: 36px;
   color: #fcfcfc;
@@ -654,9 +669,9 @@ section#banner .banner-wrapper p.description {
   }
 }
 #solutions .card-text-area p {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   color: #a8a8a8;
   line-height: 22px;
   letter-spacing: 0.01em;
@@ -678,13 +693,13 @@ section#banner .banner-wrapper p.description {
   padding: 10px 10px;
 }
 .corner-coming-soon h5 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #e6e6e6;
 }
 .corner-coming-soon span {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 15px;
   color: #a6a6a6;
@@ -790,7 +805,7 @@ section#banner .banner-wrapper p.description {
   }
 }
 #solutions-opt2 .gradient-wrapper .each-solution h4 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 900;
   font-size: 38px;
   color: #fff;
@@ -801,7 +816,7 @@ section#banner .banner-wrapper p.description {
   }
 }
 #solutions-opt2 .gradient-wrapper .each-solution .description-solution {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #cecece;
@@ -856,7 +871,7 @@ section#banner .banner-wrapper p.description {
   color: #131c20;
 }
 #contact .contact-description {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 18px;
   color: #4a4a4a;
@@ -926,7 +941,7 @@ section#banner .banner-wrapper p.description {
   font-size: 13px;
 }
 #blog-recent .card h4 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 24px;
   color: #fff;
@@ -940,9 +955,9 @@ section#banner .banner-wrapper p.description {
   }
 }
 #blog-recent .card p {
-  font-family: "Satoshi", sans-serif;
-  font-weight: 500;
-  font-size: 18px;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
   color: #868686;
   line-height: 24px;
   letter-spacing: 0.01em;
@@ -979,7 +994,7 @@ section#banner .banner-wrapper p.description {
   justify-content: flex-start;
   align-items: stretch;
   flex-direction: column;
-  width: 33.3%;
+  width: auto;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
@@ -1000,7 +1015,7 @@ section#banner .banner-wrapper p.description {
   background-color: #171717;
   border-radius: 4px;
   padding: 6px 10px;
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 14px;
   color: #b0def0;
@@ -1057,7 +1072,7 @@ footer .logo-wrapper .logo-name {
   font-size: 26px;
 }
 footer .logo-wrapper #credits {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 300;
   font-size: 14px;
   color: #fff;
@@ -1077,7 +1092,7 @@ footer .footer-menu {
   }
 }
 footer .footer-menu .each-col h6 {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 14px;
   color: rgb(189, 189, 189);
@@ -1091,7 +1106,7 @@ footer .footer-menu .each-col ul {
   gap: 12px;
 }
 footer .footer-menu .each-col ul li {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 15px;
   color: rgb(189, 189, 189);

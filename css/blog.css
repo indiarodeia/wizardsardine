@@ -1,15 +1,8 @@
-@import "../assets/font/font.css";
 :root {
   --black: #2e2e2e;
   --grey: #7b7b7b;
   --lightgrey: #f5f5f5;
   --white: #ffffff;
-  --shadowCards: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
-  --light: 300;
-  --regular: 400;
-  --medium: 500;
-  --semibold: 600;
-  --bold: 700;
   /* New variables */
   --grey-header: #1d1d1d;
 }
@@ -37,7 +30,7 @@
   }
 }
 #blog-page h1.title-blog {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 900;
   font-size: 48px;
   color: #fff;
@@ -154,7 +147,7 @@
   gap: 8px;
 }
 #blog-page .articles-wrapper .article .article-details .article-title {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 28px;
   color: #fff;
@@ -177,7 +170,7 @@
   }
 }
 #blog-page .articles-wrapper .article .article-details .article-description {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #868686;

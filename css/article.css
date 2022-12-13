@@ -1,15 +1,8 @@
-@import "../assets/font/font.css";
 :root {
   --black: #2e2e2e;
   --grey: #7b7b7b;
   --lightgrey: #f5f5f5;
   --white: #ffffff;
-  --shadowCards: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.1));
-  --light: 300;
-  --regular: 400;
-  --medium: 500;
-  --semibold: 600;
-  --bold: 700;
   /* New variables */
   --grey-header: #1d1d1d;
 }
@@ -81,7 +74,7 @@
   background-color: #282828;
 }
 #article-page .article .article-header .article-title {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: #fff;
@@ -97,7 +90,7 @@
   }
 }
 #article-page .article .article-header .article-description {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #868686;
@@ -146,7 +139,7 @@
 
 /********************* Classes for article ***************************************************************/
 .a-text {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #d0d0d0;
@@ -155,7 +148,7 @@
 }
 
 .a-heading {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 32px;
   color: #fff;
@@ -164,7 +157,7 @@
 }
 
 .a-subheading {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 700;
   font-size: 22px;
   color: #fff;
@@ -179,7 +172,7 @@
 }
 
 .a-list-item {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #d0d0d0;
@@ -189,7 +182,7 @@
 }
 
 .a-link {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 18px;
   color: #5ba9c8;
@@ -241,7 +234,7 @@
   gap: 6px;
 }
 .a-caption .a-caption-text {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 500;
   font-size: 16px;
   color: #b4b4b4;
@@ -251,7 +244,7 @@
   margin-left: 16px;
 }
 .a-caption .a-caption-author {
-  font-family: "Satoshi", sans-serif;
+  font-family: "Satoshi", sans-serif, "Poppins", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #b4b4b4;
