@@ -533,7 +533,7 @@ section#banner {
   justify-content: stretch;
   align-items: stretch;
   flex-direction: row;
-  background-image: url(../assets/images/bg-banner.jpg);
+  background-image: url(../assets/images/bg_banner.jpg);
   background-size: cover;
   background-attachment: fixed;
   margin-top: 84px;
@@ -891,7 +891,7 @@ section#banner .banner-wrapper p.description {
   justify-content: center;
   align-items: stretch;
   flex-direction: column;
-  background-image: url(../assets/images/bg-solutions.jpg);
+  background-image: url(../assets/images/bg_solutions.jpg);
 }
 @media screen and (max-width: 900px) {
   #blog-recent {
